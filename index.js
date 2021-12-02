@@ -3,6 +3,7 @@ const express=require('express');
 
 //importando a rotas//
 const PizzasRouter=require('./routers/PizzasRouter');
+const AdmRouter = require('./routers/AdmRouter');
 
 //Criar o servidor//
 const server=express();
@@ -20,7 +21,8 @@ server.use(express.static(__dirname + '/public'));
 
 
 //criar a rota respondendo a requisição
-server.use('/',PizzasRouter);
+server.use('/', PizzasRouter);
+server.use('/', AdmRouter)
 
 server.listen(3000,()=>{console.log("Servidor rodando na porta 3000")});
 

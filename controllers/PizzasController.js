@@ -30,6 +30,10 @@ module.exports=controller ={
         //Renderizar a view index passando para ela
         // as pizzas filtradas
         res.render('index', {pizzas:pizzasFiltradas, busca:string});
+    },
+
+    create: (req, res) => {
+        res.render('crud-pizzas/create');
     }
 
 }
