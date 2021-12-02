@@ -34,6 +34,27 @@ module.exports=controller ={
 
     create: (req, res) => {
         res.render('crud-pizzas/create');
+    },
+
+    store: (req, res) => {
+        // return res.send(req.body);
+        const nome = req.body.nome;
+        const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
+        const preco = Number(req.body.preco);
+
+        const pizza = {nome, ingredientes, preco, img:""}
+        res.send(pizza);
+
+        //Adidionar o id à pizza recém criada
+
+
+        // Adicionar a pizza ao array de pizzas
+
+        // Salvar o json do array de pizzas no arquivo Pizzas.json
+        // fs.writeFileSync(...)
+
+        // Direcionar o usuário para a página que exibe a lista de pizzas
+        // res.redirect(...)
     }
 
 }

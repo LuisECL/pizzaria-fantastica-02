@@ -7,4 +7,5 @@ const PizzasController=require('../controllers/PizzasController')
 //criar roteador
 module.exports= router= express.Router();
 
-router.get('/adm/pizzas/create', PizzasController.create)
+router.get('/pizzas/create', PizzasController.create)
+router.post('/pizzas/create', PizzasController.store);

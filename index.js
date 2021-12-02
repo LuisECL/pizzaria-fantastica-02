@@ -6,23 +6,28 @@ const PizzasRouter=require('./routers/PizzasRouter');
 const AdmRouter = require('./routers/AdmRouter');
 
 //Criar o servidor//
-const server=express();
+const app =express();
 
 
 //configurando o template endine do js
 //criar o ejs
-server.set("view engine", "ejs");
+app.set("view engine", "ejs");
 
 //caminho da pasta de views
 //server.set('views', './views');
 
+// Configurando o processamento de formulários
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+
 // Configurar a pasta public
-server.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 
 //criar a rota respondendo a requisição
-server.use('/', PizzasRouter);
-server.use('/', AdmRouter)
+app.use('/', PizzasRouter);
+app.use('/adm', AdmRouter)
 
-server.listen(3000,()=>{console.log("Servidor rodando na porta 3000")});
+app.listen(3000,()=>{console.log("Servidor rodando na porta 3000")});
 
