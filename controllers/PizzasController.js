@@ -44,7 +44,7 @@ module.exports=controller ={
         const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
         const preco = Number(req.body.preco);
 
-        const pizza = {nome, ingredientes, preco, img:""}
+        const pizza = {nome, ingredientes, preco, img:'/img/' + req.file.filename}
 
 
         //Adidionar o id à pizza recém criada

@@ -145,5 +145,37 @@
         "preco": 800,
         "img": "",
         "id": 14
+    },
+    {
+        "nome": "Filé com Tomate Seco",
+        "ingredientes": [
+            "Filé",
+            "Tomate Seco",
+            "Rúcula"
+        ],
+        "preco": 40,
+        "img": "",
+        "id": 15
+    },
+    {
+        "nome": "Filé com Tomate Seco",
+        "ingredientes": [
+            "Filé",
+            "Tomate Seco",
+            "Rúcula"
+        ],
+        "preco": 40,
+        "img": "",
+        "id": 16
+    },
+    {
+        "nome": "Agora vai",
+        "ingredientes": [
+            "Fé",
+            "Esperança"
+        ],
+        "preco": 50,
+        "img": "/img/1638886998723 - its fine.png",
+        "id": 17
     }
 ]
