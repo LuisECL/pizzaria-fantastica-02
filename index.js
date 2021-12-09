@@ -5,8 +5,11 @@ const express=require('express');
 const PizzasRouter=require('./routers/PizzasRouter');
 const AdmRouter = require('./routers/AdmRouter');
 
+// Importando os middlewares
+const LogMiddleware = require('./middlewares/LogMiddleware');
+
 //Criar o servidor//
-const app =express();
+const app = express();
 
 
 //configurando o template endine do js
@@ -20,6 +23,8 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Middleware de LOG
+// app.use(LogMiddleware);
 
 // Configurar a pasta public
 app.use(express.static(__dirname + '/public'));
@@ -27,7 +32,7 @@ app.use(express.static(__dirname + '/public'));
 
 //criar a rota respondendo a requisição
 app.use('/', PizzasRouter);
-app.use('/adm', AdmRouter)
+app.use('/adm', LogMiddleware, AdmRouter);
 
 app.listen(3000,()=>{console.log("Servidor rodando na porta 3000")});
 
