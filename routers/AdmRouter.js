@@ -1,5 +1,7 @@
 //importar o express
 const express = require('express');
+const ValidadorDeFormPizza = require('../middlewares/ValidadorDeFormParaPizza');
+
 const multer = require('multer');
 const storage = multer.diskStorage(
   {
@@ -17,4 +19,4 @@ const PizzasController=require('../controllers/PizzasController')
 module.exports= router= express.Router();
 
 router.get('/pizzas/create', PizzasController.create)
-router.post('/pizzas/create', upload.single('img'), PizzasController.store);
+router.post('/pizzas/create', upload.single('img'), ValidadorDeFormPizza, PizzasController.store);

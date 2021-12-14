@@ -2,6 +2,8 @@ const pizzas=require('../database/Pizzas.json')
 const fs = require('fs');
 const { stringify } = require('querystring');
 
+const {validationResult} = require ('express-validator');
+
 //importar o controller
 module.exports=controller ={
     listar:(req,res)=>{
@@ -39,6 +41,14 @@ module.exports=controller ={
     },
 
     store: (req, res) => {
+
+        const erros = validationResult(req)
+
+        if (!erros.isEmpty()){
+            // return res.send(erros.mapped)
+            return res.render('crud-pizzas/create', {erros: erros.mapped})
+        }
+
         // return res.send(req.body);
         const nome = req.body.nome;
         const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
