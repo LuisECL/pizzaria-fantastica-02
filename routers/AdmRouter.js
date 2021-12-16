@@ -16,6 +16,7 @@ const upload = multer({storage});
 const PizzasController=require('../controllers/PizzasController');
 const AdmController = require('../controllers/AdmController');
 const UsuarioLogado = require('../middlewares/UsuarioLogado');
+const SemLogin = require('../middlewares/SemLogin');
 
 //criar roteador
 module.exports= router= express.Router();
@@ -23,5 +24,7 @@ module.exports= router= express.Router();
 router.get('/pizzas/create', UsuarioLogado, PizzasController.create)
 router.post('/pizzas/create', upload.single('img'), ValidadorDeFormPizza, PizzasController.store);
 
-router.get('/login', AdmController.showLogin);
+router.get('/login', SemLogin, AdmController.showLogin);
 router.post('/login', AdmController.login);
+
+router.get('/logout', AdmController.logout);

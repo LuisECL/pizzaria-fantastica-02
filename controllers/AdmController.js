@@ -26,5 +26,10 @@ module.exports = adController = {
     //Redirecionar o usuário para uma página interna
     return res.redirect("/adm/pizzas/create");
 
+  },
+
+  logout: (req, res) => {
+    req.session.usuario = undefined;
+    res.redirect('/adm/login')
   }
 }
