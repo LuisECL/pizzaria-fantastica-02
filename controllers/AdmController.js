@@ -20,8 +20,11 @@ module.exports = adController = {
       return res.send('Senha ou email inválidos')
     }
 
-    // Se chegou até aqui, mandar uma mensagem de sucesso
-    return res.send('Ok! Tudo certo...')
+    // Se chegou até aqui, escreve a session do usuario
+    req.session.usuario = usuario;
+
+    //Redirecionar o usuário para uma página interna
+    return res.redirect("/adm/pizzas/create");
 
   }
 }

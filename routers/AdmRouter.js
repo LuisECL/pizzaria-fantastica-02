@@ -15,11 +15,12 @@ const upload = multer({storage});
 //importar os Controllers
 const PizzasController=require('../controllers/PizzasController');
 const AdmController = require('../controllers/AdmController');
+const UsuarioLogado = require('../middlewares/UsuarioLogado');
 
 //criar roteador
 module.exports= router= express.Router();
 
-router.get('/pizzas/create', PizzasController.create)
+router.get('/pizzas/create', UsuarioLogado, PizzasController.create)
 router.post('/pizzas/create', upload.single('img'), ValidadorDeFormPizza, PizzasController.store);
 
 router.get('/login', AdmController.showLogin);
