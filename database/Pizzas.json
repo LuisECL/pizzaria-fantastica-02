@@ -63,7 +63,7 @@
         "destaque": true
     },
     {
-        "id": 8,
+        "id": 7,
         "nome": "Caipira",
         "ingredientes": [
             "mussarela",
@@ -75,7 +75,7 @@
         "destaque": true
     },
     {
-        "id": 9,
+        "id": 8,
         "nome": "Napolitana",
         "ingredientes": [
             "mussarela",
@@ -88,7 +88,7 @@
         "destaque": true
     },
     {
-        "id": 10,
+        "id": 9,
         "nome": "Baiana",
         "ingredientes": [
             "mussarela",
@@ -101,7 +101,7 @@
         "destaque": true
     },
     {
-        "id": 11,
+        "id": 10,
         "nome": "Meat & Bacon",
         "ingredientes": [
             "mussarela",
@@ -113,7 +113,7 @@
         "destaque": true
     },
     {
-        "id": 12,
+        "id": 11,
         "nome": "Rúcula",
         "ingredientes": [
             "mussarela",
@@ -123,77 +123,5 @@
         "preco": 38.5,
         "img": "/img/quatroqueijos.jpg",
         "destaque": true
-    },
-    {
-        "nome": "Calabresas Toscana",
-        "ingredientes": [
-            "Massa",
-            "Queijo",
-            "Calabresa"
-        ],
-        "preco": 50,
-        "img": "",
-        "id": 13
-    },
-    {
-        "nome": "Edson",
-        "ingredientes": [
-            "Perseverança",
-            "Garra",
-            "Massa"
-        ],
-        "preco": 800,
-        "img": "",
-        "id": 14
-    },
-    {
-        "nome": "Filé com Tomate Seco",
-        "ingredientes": [
-            "Filé",
-            "Tomate Seco",
-            "Rúcula"
-        ],
-        "preco": 40,
-        "img": "",
-        "id": 15
-    },
-    {
-        "nome": "Filé com Tomate Seco",
-        "ingredientes": [
-            "Filé",
-            "Tomate Seco",
-            "Rúcula"
-        ],
-        "preco": 40,
-        "img": "",
-        "id": 16
-    },
-    {
-        "nome": "Agora vai",
-        "ingredientes": [
-            "Fé",
-            "Esperança"
-        ],
-        "preco": 50,
-        "img": "/img/1638886998723 - its fine.png",
-        "id": 17
-    },
-    {
-        "nome": "",
-        "ingredientes": [
-            ""
-        ],
-        "preco": 0,
-        "img": "/img/1639060639254 - elmo.jpg",
-        "id": 18
-    },
-    {
-        "nome": "",
-        "ingredientes": [
-            ""
-        ],
-        "preco": 0,
-        "img": "/img/1639060706129 - simpsons.png",
-        "id": 19
     }
 ]
